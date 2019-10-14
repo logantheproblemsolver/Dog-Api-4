@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    cursor: url(http://cur.cursors-4u.net/nature/nat-4/nat354.ani),
+    url(http://cur.cursors-4u.net/nature/nat-4/nat354.png),
+    auto !important;
+    background-color: lightgray;
+}
+
+body {
+    text-align: center;
+}
+
+form {
+    width: 500px;
+    height: 100px;
+    margin: auto auto;
+    text-align: center;
+}
+
+
+button {
+    width: 50px;
+    height: 20px;
+}
+
+
+fieldset {
+    border: none;   
+}
+
+
+input {
+    border-radius: 10%;
+    box-shadow: 2px 1px rgb(141, 132, 132);
+}
+
+
+select {
+    border-radius: 10%;
+    box-shadow: 2px 1px rgb(141, 132, 132);
+}
+
+
+
+.results {
+    margin: auto auto;
+    text-align: center;
+    display: inline;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.img-results {
+    height: 500px;
+}
