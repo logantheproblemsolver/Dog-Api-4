@@ -20,15 +20,18 @@ function getImage(select) {
 
 
 function displayResults(responseJson) {
-    $('.results').append(`
-    <img src="${responseJson.message}" alt="Random Doggo!" class="img-results">`) 
-    $('.results').removeClass('hidden');
+    if (responseJson.status === 'error') {
+        $('.results').append(`<p>The breed is not found, please choose another</p>`)
+    } else {
+        $('.results').append(`
+        <img src="${responseJson.message}" alt="Random Doggo!" class="img-results">`) 
+        $('.results').removeClass('hidden');
+    }
 }
 
 function pressSubmit() {
     $('.submit').on('click', function(s) {
-        let breed = $('.breeds').val().replace('-', '/');
-        let select = breed;
+        let select = $('.breeds').val();
         s.preventDefault(); 
         getImage(select);
         $('.results').empty();
